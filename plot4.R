@@ -46,7 +46,7 @@ with(data_consumption_interval, {
         col = "blue")
   
   legend("topright",legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-         col = c("black", "red", "blue"), lwd = 1, lty = 1, y.intersp = 2, x.intersp = 1, cex = 0.5, box.lwd = 0)
+         col = c("black", "red", "blue"), lwd = 1, lty = 1, y.intersp = 1.5, cex = 0.8, box.lwd = 0)
   # 4
   plot(Time, Global_reactive_power,
        type = "l",
