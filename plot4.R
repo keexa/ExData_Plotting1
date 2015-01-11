@@ -11,14 +11,14 @@ d1 <- as.Date("2007-02-01", format = "%Y-%m-%d")
 d2 <- as.Date("2007-02-02", format = "%Y-%m-%d")
 # Retrieve only the dataset with the dates specified
 data_consumption_interval <- data_consumption[data_consumption$Date %in% c(d1, d2),]
-par(mfrow = c(2, 2), cex.lab = 1)
+par(mfrow = c(2, 2), cex = 0.6 , mar = c(6, 4, 6, 4))
 
 with(data_consumption_interval, {
   # 1
   plot(Time, Global_active_power,
         type = "l",
         xlab = "",
-        ylab = "Global Active Power (kilowatts)")
+        ylab = "Global Active Power")
   
   # 2
   plot(Time, Voltage,
@@ -46,7 +46,7 @@ with(data_consumption_interval, {
         col = "blue")
   
   legend("topright",legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-         col = c("black", "red", "blue"), lwd = 1, lty = 1, cex = 0.8, box.lwd = 0)
+         col = c("black", "red", "blue"), lwd = 1, lty = 1, y.intersp = 2, x.intersp = 1, cex = 0.5, box.lwd = 0)
   # 4
   plot(Time, Global_reactive_power,
        type = "l",
